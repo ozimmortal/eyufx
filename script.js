@@ -60,7 +60,7 @@ gsap.from('.limited-offer p', {
     ease: 'power3.out'
 });
 
-gsap.from('.limited-offer .btn', {
+gsap.from('.limited-offer #start-btn', {
     opacity: 0,
     y: 50,
     duration: 1,
