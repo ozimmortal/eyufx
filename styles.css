@@ -602,6 +602,7 @@ header .btn:active {
 
 .about-image img {
     width: 100%;
+    height: 80%;
     border-radius: 20px;
 }
 
