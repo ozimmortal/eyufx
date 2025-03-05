@@ -1,0 +1,1023 @@
+/* General Styles */
+@font-face {
+    font-family: blanka;
+    src: url('/assets/font/Blanka-Regular.otf');
+  }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    color: #fff;
+    background: linear-gradient(180deg, #000 0%, #0a0a0a 50%, #000 100%);
+    font-size: 14px;
+    animation: bodyGlow 3s infinite alternate;
+}
+
+@keyframes bodyGlow {
+    0% {
+        box-shadow: 0 0 10px rgba(138, 43, 226, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 30px rgba(138, 43, 226, 0.6);
+    }
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Section */
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(30px);
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: top 0.3s ease;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2px;
+}
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 700;
+    color: #EDA800;
+    font-family:'blanka';
+    letter-spacing: -1px;
+    text-rendering: optimizeLegibility;
+    animation: glow 3s infinite alternate;
+}
+header .tre{
+    margin: 0;
+    margin-top: 10px;
+    font-size: 2.3em;
+    font-weight: 700;
+    color: #EDA800;
+    font-family:'Montserrat', sans-serif;
+    letter-spacing: -1px;
+    text-rendering: optimizeLegibility;
+    animation: glow 3s infinite alternate;
+}
+
+header nav {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 25px;
+    transition: background 0.3s ease;
+    font-size: 1.2em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+header nav a:hover {
+    background: #8A2BE2;
+}
+
+/* Updated JOIN US Button Styles */
+header .btn {
+    background: linear-gradient(145deg, #EDA800, #ff8800);
+    color: #000;
+    padding: 8px 16px;
+    font-size: 1.2em;
+    font-weight: 700;
+    border-radius: 12px;
+    transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    font-family: "Roboto", sans-serif;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 8px 20px rgba(237, 168, 0, 0.4),
+                0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    animation: glow 3s infinite alternate;
+}
+
+/* Radial Gradient Animation for JOIN US Button */
+header .btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 70%);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Hover State for JOIN US Button */
+header .btn:hover {
+    background: linear-gradient(145deg, #8A2BE2, #6a1bb0);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(138, 43, 226, 0.5),
+                0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Hover State for Radial Gradient */
+header .btn:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+/* Active State (Click Effect) */
+header .btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 6px 15px rgba(138, 43, 226, 0.5),
+                0 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Softer and Smoother Glow Animation */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px rgba(237, 168, 0, 0.5), 0 0 10px rgba(237, 168, 0, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 15px rgba(237, 168, 0, 0.8), 0 0 30px rgba(237, 168, 0, 0.8);
+    }
+}
+
+/* Glowing Text for "Successful Forex Trader", "Program", and "About Me" */
+.glowing-text {
+    color: #EDA800;
+    animation: glow-text 2s infinite alternate;
+}
+
+@keyframes glow-text {
+    0% {
+        text-shadow: 0 0 5px rgba(237, 168, 0, 0.5), 0 0 10px rgba(237, 168, 0, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 15px rgba(237, 168, 0, 0.8), 0 0 30px rgba(237, 168, 0, 0.8);
+    }
+}
+
+/* Sharper and Cleaner Text for Limited Offer Section */
+.sharp-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 1.1em;
+    letter-spacing: -0.5px;
+    line-height: 1.6;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+/* Hide header by default on mobile devices */
+@media (max-width: 768px) {
+    header {
+        top: -100px;
+    }
+
+    header.visible {
+        top: 0;
+    }
+}
+
+/* Tablet-specific adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header nav a {
+        font-size: 1em;
+        padding: 6px 10px;
+    }
+
+    header .btn {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+}
+
+/* Mentorship Label Styling */
+.mentorship-label {
+    font-size: 0.9em;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    padding: 3px 9px;
+    border-radius: 100px;
+    display: inline-block;
+    margin-bottom: 25px;
+    position: relative;
+    background: transparent;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 215, 150, 0.2);
+    box-shadow: 0 0 3px rgba(255, 215, 150, 0.15);
+}
+
+/* Limited Time Offer Section */
+.limited-offer {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(138, 43, 226, 0.8) 50%, rgba(0, 0, 0, 1) 100%);
+    padding: 120px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.limited-offer h1 {
+    font-size: 4.5em;
+    margin-top: 0;
+    margin-bottom: 7px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.limited-offer p {
+    font-size: 1.4em;
+    margin-bottom: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.limited-offer .btn {
+    background: linear-gradient(145deg, #EDA800, #ff8800);
+    color: #000;
+    padding: 8px 16px;
+    font-size: 1.2em;
+    font-weight: 500 !important;
+    font-family: 'Inter', sans-serif !important;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 8px 20px rgba(237, 168, 0, 0.4),
+                0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.limited-offer .btn:hover {
+    background: linear-gradient(145deg, #8A2BE2, #6a1bb0);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(138, 43, 226, 0.5),
+                0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.limited-offer .btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 6px 15px rgba(138, 43, 226, 0.5),
+                0 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Video Container */
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 56.25%;
+}
+
+.video-container wistia-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Custom Wistia Player Styles */
+.wistia_embed {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.wistia_embed .wistia_click_to_play {
+    display: none;
+}
+
+.wistia_embed .wistia_play_button {
+    background-color: #EDA800;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.wistia_embed .wistia_play_button:before {
+    content: "▶";
+    font-size: 24px;
+    color: #000;
+}
+
+/* Ensure proper video sizing for laptop screens */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .video-container {
+        max-width: 1200px;
+        padding-top: 56.25%;
+        position: relative;
+    }
+
+    .video-container wistia-player {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .wistia_embed {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .wistia_embed .wistia_controls {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        min-width: 150px;
+        max-width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 5px 10px;
+        border-radius: 10px;
+    }
+
+    .wistia_embed .wistia_play_button,
+    .wistia_embed .wistia_volume_button {
+        position: relative;
+        z-index: 10;
+        width: 30px;
+        height: 30px;
+        margin: 0 5px;
+    }
+
+    .wistia_embed .wistia_play_button:before {
+        font-size: 18px;
+    }
+
+    .wistia_embed .wistia_volume_button {
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
+    }
+}
+
+/* Responsive adjustments for smaller devices */
+@media (max-width: 768px) {
+    /* Starting Soon Tag */
+    .coming-soon-label {
+        font-size: 0.8em !important; /* Smaller font size for mobile */
+        padding: 6px 12px !important; /* Smaller padding for mobile */
+        top: -10px !important; /* Adjust position for mobile */
+        right: -10px !important; /* Adjust position for mobile */
+        transform: rotate(10deg) !important; /* Smaller rotation for mobile */
+        box-shadow: 0 4px 10px rgba(138, 43, 226, 0.5) !important; /* Smaller shadow for mobile */
+    }
+
+    /* Limited Offer Section */
+    .limited-offer {
+        padding: 40px 0 !important; /* Force reduced padding for mobile */
+    }
+
+    .limited-offer h1 {
+        font-size: 1.5em !important; /* Force smaller font size for mobile */
+        line-height: 1.2 !important; /* Adjusted line height */
+    }
+
+    .limited-offer p {
+        font-size: 0.8em !important; /* Force smaller font size for mobile */
+        margin-bottom: 20px !important; /* Force reduced margin */
+    }
+
+    .limited-offer .btn {
+        font-size: 0.9em !important; /* Force smaller font size for mobile */
+        padding: 6px 12px !important; /* Force smaller button padding */
+    }
+
+    .video-container {
+        margin-top: 15px !important; /* Force reduced margin */
+    }
+
+    /* What You Will Get in the Program Section */
+    .program-section {
+        padding: 100px 0 !important; /* Force reduced padding for mobile */
+    }
+
+    .program-header {
+        font-size: 1.5em !important; /* Force smaller font size for mobile */
+    }
+
+    .program-grid {
+        gap: 10px !important; /* Force reduced gap between cards */
+    }
+
+    .program-card {
+        padding: 10px !important; /* Force reduced padding for mobile */
+    }
+
+    .program-card h3 {
+        font-size: 1em !important; /* Force smaller font size for mobile */
+    }
+
+    .program-card p {
+        font-size: 0.8em !important; /* Force smaller font size for mobile */
+    }
+
+    .program-icon {
+        font-size: 1.5em !important; /* Force smaller icon size for mobile */
+    }
+
+    /* Pricing Section */
+    .pricing-section {
+        padding: 100px 0 !important; /* Force reduced padding for mobile */
+    }
+
+    .pricing-header {
+        font-size: 1.5em !important; /* Force smaller font size for mobile */
+    }
+
+    .pricing-card {
+        padding: 15px !important; /* Force reduced padding for mobile */
+    }
+
+    .pricing-card h3 {
+        font-size: 1.2em !important; /* Force smaller font size for mobile */
+    }
+
+    .pricing-card .price {
+        font-size: 1.8em !important; /* Force smaller font size for mobile */
+    }
+
+    .pricing-card ul li {
+        font-size: 0.8em !important; /* Force smaller font size for mobile */
+    }
+
+    .pricing-card .btn {
+        font-size: 0.8em !important; /* Force smaller font size for mobile */
+        padding: 8px 16px !important; /* Force smaller button padding */
+    }
+
+    /* About Me Section */
+    .about-us {
+        padding: 100px 0 !important; /* Force reduced padding for mobile */
+    }
+
+    .about-header {
+        font-size: 1.5em !important; /* Force smaller font size for mobile */
+    }
+
+    .about-content {
+        flex-direction: column !important; /* Force vertical layout for mobile */
+        gap: 15px !important; /* Force reduced gap */
+    }
+
+    .about-text p {
+        font-size: 0.8em !important; /* Force smaller font size for mobile */
+    }
+}
+
+/* Responsive adjustments for tablet devices */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .limited-offer {
+        padding: 120px 0;
+    }
+
+    .limited-offer h1 {
+        font-size: 2.5em;
+        margin-top: 0;
+    }
+
+    .limited-offer p {
+        font-size: 1em;
+    }
+
+    .limited-offer .btn {
+        margin-bottom: 50px;
+    }
+
+    .video-container {
+        padding-top: 56.25%;
+        margin-top: 50px;
+    }
+}
+
+/* Responsive adjustments for larger monitors */
+@media (min-width: 1025px) {
+    .video-container {
+        max-width: 1400px;
+    }
+}
+
+/* General Section Styling */
+.section {
+    padding: 60px 0;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(180deg, #000 0%, #0a0a0a 50%, #000 100%);
+    position: relative;
+    z-index: 1;
+}
+
+.section h2 {
+    font-size: 2em;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.section h2 .glowing-text {
+    color: #EDA800;
+    animation: glow-text 2s infinite alternate;
+}
+
+.section p {
+    font-size: 0.9em;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    line-height: 1.8;
+    color: #ddd;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* About Us Section */
+.about-us {
+    padding: 60px 0;
+    text-align: center;
+    background: linear-gradient(180deg, #000 0%, #0a0a0a 50%, #000 100%);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 400px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.about-text {
+    flex: 2;
+}
+
+.about-text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #ddd;
+}
+
+/* Box Frames for Services */
+.frame {
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #EDA800;
+    background: #111;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    max-width: 800px;
+    color: #fff;
+}
+
+.frame h3 {
+    font-size: 1.1em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.frame p {
+    font-size: 0.8em;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Program Section */
+.program-section {
+    padding: 60px 0;
+    text-align: center;
+    background: linear-gradient(180deg, #000 0%, #0a0a0a 50%, #000 100%);
+}
+
+.program-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.program-card {
+    background: #111;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 2px solid rgba(237, 168, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.program-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(237, 168, 0, 0.5);
+}
+
+/* Gold and Purple Glow Effect Below Text */
+.program-card::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 80%;
+    height: 10px;
+    background: linear-gradient(90deg, #EDA800, #8A2BE2);
+    transform: translateX(-50%);
+    filter: blur(10px);
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.program-card:hover::after {
+    opacity: 1;
+}
+
+.program-icon {
+    font-size: 3em;
+    color: #EDA800;
+    margin-bottom: 15px;
+}
+
+.program-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.program-card p {
+    font-size: 1.2em;
+    color: #ddd;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Glowing Text for "Program" */
+.glowing-text {
+    color: #EDA800;
+    animation: glow-text 2s infinite alternate;
+}
+
+@keyframes glow-text {
+    0% {
+        text-shadow: 0 0 5px rgba(237, 168, 0, 0.5), 0 0 10px rgba(237, 168, 0, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 15px rgba(237, 168, 0, 0.8), 0 0 30px rgba(138, 43, 226, 0.8);
+    }
+}
+
+
+
+/* Larger font size for "What You Will Get in the Program" header */
+.program-header {
+    font-size: 3em;
+}
+
+/* Larger font size for "About Me" header */
+.about-header {
+    font-size: 3em;
+}
+
+/* Pricing Section */
+.pricing-section {
+    padding: 60px 0;
+    text-align: center;
+    background: linear-gradient(180deg, #000 0%, #0a0a0a 50%, #000 100%);
+}
+
+.pricing-header {
+    font-size: 3em;
+    margin-bottom: 40px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.pricing-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.pricing-card {
+    background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(237, 168, 0, 0.3);
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-card h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.pricing-card .price {
+    font-size: 3.5em;
+    color: #EDA800;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.pricing-card ul li {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: #ddd;
+    display: flex;
+    align-items: center;
+}
+
+.pricing-card ul li i {
+    color: #EDA800;
+    margin-right: 10px;
+}
+
+.pricing-card .btn {
+    background: linear-gradient(145deg, #EDA800, #ff8800) !important; /* Same gradient as "GET STARTED TODAY" */
+    color: #000 !important;
+    padding: 15px 30px !important;
+    font-size: 1.2em !important;
+    font-weight: 600 !important;
+    border-radius: 12px !important;
+    transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    display: inline-block !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    box-shadow: 0 8px 20px rgba(237, 168, 0, 0.4), 0 4px 10px rgba(0, 0, 0, 0.3) !important;
+    border: 2px solid rgba(255, 255, 255, 0.1) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    cursor: pointer !important;
+    text-decoration: none;
+}
+
+.pricing-card .btn:hover {
+    background: linear-gradient(145deg, #8A2BE2, #6a1bb0) !important;
+    color: #fff !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 12px 25px rgba(138, 43, 226, 0.5), 0 6px 15px rgba(0, 0, 0, 0.4) !important;
+}
+
+.pricing-card .btn:active {
+    transform: translateY(1px) !important;
+    box-shadow: 0 6px 15px rgba(138, 43, 226, 0.5), 0 3px 10px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Add this to the existing styles.css file */
+
+/* Ensure the price label does not overlap the Coming Soon tag */
+.pricing-card .price {
+    position: relative;
+    z-index: 1;
+    filter: blur(5px);
+    color: rgba(237, 168, 0, 0.7);
+    transition: filter 0.3s ease, color 0.3s ease;
+}
+
+/* Remove blur effect on hover (optional) */
+.pricing-card:hover .price {
+    filter: blur(0);
+    color: #EDA800;
+}
+
+.pricing-card .price .discount {
+    font-size: 0.5em;
+    color: #8A2BE2;
+    background: rgba(138, 43, 226, 0.1);
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/* Ensure the pricing card itself does not interfere with the Coming Soon tag */
+.pricing-card {
+    position: relative;
+    overflow: visible;
+}
+
+/* Price and Discount Styling */
+.price-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.price-container .price {
+    font-size: 2.5em;
+    color: #EDA800;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+}
+
+.price-container .discount {
+    font-size: 1em;
+    color: #8A2BE2;
+    background: rgba(138, 43, 226, 0.1);
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Remove mysterious effect (blur) */
+.pricing-card .price {
+    filter: none;
+    color: #EDA800;
+}
+
+/* Glowing Line */
+.glowing-line {
+    width: 95%;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(138, 43, 226, 0), #8A2BE2, rgba(138, 43, 226, 0));
+    margin: 30px auto;
+    position: relative;
+    animation: glow-line 2s infinite alternate;
+}
+
+@keyframes glow-line {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Benefits Section */
+.benefits h4 {
+    font-size: 1.5em;
+    color: #EDA800;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.benefits ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.benefits ul li {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: #ddd;
+    display: flex;
+    align-items: center;
+}
+
+.benefits ul li i {
+    color: #EDA800;
+    margin-right: 10px;
+}
+
+/* Coming Soon Label */
+.coming-soon-label {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: linear-gradient(145deg, #8A2BE2, #6a1bb0);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1.2em;
+    font-weight: 700;
+    transform: rotate(15deg);
+    box-shadow: 0 6px 20px rgba(138, 43, 226, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 100;
+    animation: glow-gradient 2s infinite alternate;
+}
+
+@keyframes glow-gradient {
+    0% {
+        box-shadow: 0 6px 20px rgba(138, 43, 226, 0.5);
+    }
+    100% {
+        box-shadow: 0 6px 30px rgba(138, 43, 226, 0.8);
+    }
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(180deg, #000 0%, #0a0a0a 50%, #000 100%);
+    padding: 40px 0;
+    text-align: center;
+    color: #ddd;
+    font-size: 0.8em;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Social Media Icons */
+.social-media {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    color: #EDA800; /* Gold color */
+    font-size: 2.5em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #8A2BE2; /* Purple color on hover */
+    transform: translateY(-5px);
+}
+
+/* Add glowing line to specific sections */
+.program-section::after,
+.pricing-section::after,
+.about-us::after {
+    content: '';
+    display: block;
+    width: 95%;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(138, 43, 226, 0), #8A2BE2, rgba(138, 43, 226, 0));
+    margin: 100px auto 0; /* Adjust margin to control spacing above and below the line */
+    position: relative;
+    animation: glow-line 2s infinite alternate;
+}
