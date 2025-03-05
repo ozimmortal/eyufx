@@ -423,13 +423,13 @@ header .btn:active {
     }
 
     .limited-offer h1 {
-        font-size:1.8em !important; /* Force smaller font size for mobile */
+        font-size:2em !important; /* Force smaller font size for mobile */
         line-height: 1.2 !important;
         word-wrap: break-word; /* Adjusted line height */
     }
 
     .limited-offer p {
-        font-size: 0.8em !important; /* Force smaller font size for mobile */
+        font-size: 1em !important; /* Force smaller font size for mobile */
         margin-bottom: 20px !important; /* Force reduced margin */
     }
 
