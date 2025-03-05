@@ -1,7 +1,7 @@
 /* General Styles */
 @font-face {
     font-family: blanka;
-    src: url('/assets/font/Blanka-Regular.otf');
+    src: url('./assets/font/Blanka-Regular.otf');
   }
 
 body {
