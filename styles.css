@@ -55,7 +55,7 @@ header .container {
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 2px;
+    gap: 4px;
 }
 header h1 {
     margin: 0;
