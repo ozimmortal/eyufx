@@ -347,6 +347,7 @@ header .btn:active {
 
 /* Ensure proper video sizing for laptop screens */
 @media (min-width: 1025px) and (max-width: 1440px) {
+  
     .video-container {
         max-width: 1200px;
         padding-top: 56.25%;
@@ -406,6 +407,7 @@ header .btn:active {
 /* Responsive adjustments for smaller devices */
 @media (max-width: 768px) {
     /* Starting Soon Tag */
+    
     .coming-soon-label {
         font-size: 0.8em !important; /* Smaller font size for mobile */
         padding: 6px 12px !important; /* Smaller padding for mobile */
@@ -421,8 +423,9 @@ header .btn:active {
     }
 
     .limited-offer h1 {
-        font-size: 1.5em !important; /* Force smaller font size for mobile */
-        line-height: 1.2 !important; /* Adjusted line height */
+        font-size:1.8em !important; /* Force smaller font size for mobile */
+        line-height: 1.2 !important;
+        word-wrap: break-word; /* Adjusted line height */
     }
 
     .limited-offer p {
