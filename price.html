@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Options - EyuelFxTrading</title>
-    <link rel="icon" type="image/x-icon" href="/assets/image/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --primary: #EDA800;
-            --secondary: #8A2BE2; /* Darker purple matching home page */
+            --secondary: #8A2BE2;
             --dark: #0A0A0A;
             --darker: #050505;
             --light: #FFFFFF;
@@ -400,10 +399,7 @@
 
         <div class="tabs-container">
             <div class="tabs">
-                <div class="tab active" onclick="showTab('telebirr')">
-                    <i class="fas fa-mobile-alt"></i> Telebirr
-                </div>
-                <div class="tab" onclick="showTab('crypto')">
+                <div class="tab active" onclick="showTab('crypto')">
                     <i class="fab fa-bitcoin"></i> Crypto
                 </div>
                 <div class="tab" onclick="showTab('cbe')">
@@ -414,32 +410,7 @@
 
         <div class="divider"></div>
 
-        <div id="telebirr" class="tab-content active">
-            <h3><i class="fas fa-mobile-alt"></i> Telebirr Payment</h3>
-            
-            <div class="payment-details">
-                <div class="payment-info">
-                    <span class="payment-label">Account Name:</span>
-                    <span class="payment-value">Eyuel Tamrat</span>
-                </div>
-                <div class="payment-info">
-                    <span class="payment-label">Phone Number:</span>
-                    <span class="payment-value">0908188131</span>
-                </div>
-                <div class="payment-info">
-                    <span class="payment-label">Amount:</span>
-                    <span class="payment-value">7500 ETB (Equivalent to $49)</span>
-                </div>
-            </div>
-            
-            <div class="action-buttons">
-                <button class="btn" onclick="copyToClipboard('0908188131', this)">
-                    <i class="fas fa-copy"></i> Copy Number
-                </button>
-            </div>
-        </div>
-
-        <div id="crypto" class="tab-content">
+        <div id="crypto" class="tab-content active">
             <h3><i class="fab fa-bitcoin"></i> Crypto Payment</h3>
             
             <div class="payment-details">
