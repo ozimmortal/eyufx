@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Options - EyuelFxTrading</title>
-    <link rel="icon" type="image/x-icon" href="/assets/image/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --primary: #EDA800;
-            --secondary: #8A2BE2; /* Darker purple matching home page */
+            --secondary: #8A2BE2;
             --dark: #0A0A0A;
             --darker: #050505;
             --light: #FFFFFF;
@@ -32,6 +31,8 @@
             color: var(--light);
             min-height: 100vh;
             line-height: 1.6;
+            display: flex;
+            flex-direction: column;
         }
         
         .container {
@@ -39,6 +40,7 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem 0;
+            flex: 1;
         }
         
         .header {
@@ -314,6 +316,34 @@
             border-radius: 50%;
             box-shadow: 0 0 10px var(--secondary);
         }
+
+        /* Social Media Section */
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 3rem 0;
+        }
+
+        .social-icon {
+            color: var(--primary);
+            font-size: 2.5em;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            color: var(--secondary);
+            transform: translateY(-5px);
+        }
+
+        footer {
+            text-align: center;
+            color: var(--gray);
+            font-size: 0.9rem;
+            padding: 1.5rem 0;
+            background: rgba(0, 0, 0, 0.3);
+            width: 100%;
+        }
         
         /* Responsive adjustments */
         @media (max-width: 768px) {
@@ -376,6 +406,14 @@
             .telegram-link {
                 font-size: 1.1rem;
             }
+
+            .social-media {
+                gap: 25px;
+            }
+
+            .social-icon {
+                font-size: 2em;
+            }
         }
         
         /* Animation for success state */
@@ -400,10 +438,7 @@
 
         <div class="tabs-container">
             <div class="tabs">
-                <div class="tab active" onclick="showTab('telebirr')">
-                    <i class="fas fa-mobile-alt"></i> Telebirr
-                </div>
-                <div class="tab" onclick="showTab('crypto')">
+                <div class="tab active" onclick="showTab('crypto')">
                     <i class="fab fa-bitcoin"></i> Crypto
                 </div>
                 <div class="tab" onclick="showTab('cbe')">
@@ -414,32 +449,7 @@
 
         <div class="divider"></div>
 
-        <div id="telebirr" class="tab-content active">
-            <h3><i class="fas fa-mobile-alt"></i> Telebirr Payment</h3>
-            
-            <div class="payment-details">
-                <div class="payment-info">
-                    <span class="payment-label">Account Name:</span>
-                    <span class="payment-value">Eyuel Tamrat</span>
-                </div>
-                <div class="payment-info">
-                    <span class="payment-label">Phone Number:</span>
-                    <span class="payment-value">0908188131</span>
-                </div>
-                <div class="payment-info">
-                    <span class="payment-label">Amount:</span>
-                    <span class="payment-value">7500 ETB (Equivalent to $49)</span>
-                </div>
-            </div>
-            
-            <div class="action-buttons">
-                <button class="btn" onclick="copyToClipboard('0908188131', this)">
-                    <i class="fas fa-copy"></i> Copy Number
-                </button>
-            </div>
-        </div>
-
-        <div id="crypto" class="tab-content">
+        <div id="crypto" class="tab-content active">
             <h3><i class="fab fa-bitcoin"></i> Crypto Payment</h3>
             
             <div class="payment-details">
@@ -513,7 +523,27 @@
             </a>
             <p style="margin-top: 1rem; font-size: 1rem;">Your payment will be verified within 24 hours</p>
         </div>
+
+        <!-- Social Media Links -->
+        <div class="social-media">
+            <a href="https://www.instagram.com/eyuelfx/" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://t.me/EyuelFxTrading" target="_blank" class="social-icon">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <a href="https://www.youtube.com/@EyuelTrading" target="_blank" class="social-icon">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.tiktok.com/@eyueltrading" target="_blank" class="social-icon">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        </div>
     </div>
+
+    <footer>
+        &copy; 2025 EyuelFxTrading. All Rights Reserved.
+    </footer>
 
     <script>
         // Tab switching functionality
